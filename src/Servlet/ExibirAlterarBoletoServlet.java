@@ -33,9 +33,9 @@ public class ExibirAlterarBoletoServlet extends HttpServlet {
 		out.println("<body>");
 		
 		out.println("<form action='alterarFatura'>");
-		out.println("COD_BOLETO: <input type='text' name='codigoBoleto' value='"+Boleto.getCodigoBoleto()+"' /> <br />");
-		out.println("DataPagamento: <input type='text' name='dataPagamento' value='"+Boleto.getDataPagamento()+"' /> <br />");
-		out.println("ValorPago: <input type='text' name='valorPago' value='"+Boleto.getValorPago()+"' /> <br />");
+		//out.println("COD_BOLETO: <input type='text' name='codigoBoleto' value='"+Boleto.getCodigoBoleto()+"' /> <br />");
+		//out.println("DataPagamento: <input type='text' name='dataPagamento' value='"+Boleto.getDataPagamento()+"' /> <br />");
+		//out.println("ValorPago: <input type='text' name='valorPago' value='"+Boleto.getValorPago()+"' /> <br />");
 		out.println("<input type='submit' value='Alterar' />");
 		out.println("</form>");
 		

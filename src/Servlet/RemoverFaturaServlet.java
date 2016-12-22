@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import dao.Faturadao;
 import Basicas.Fatura;
 
-@WebServlet("/removerBoleto")
+@WebServlet("/removerBoleto2")
 public class RemoverFaturaServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 8720553500987085526L;

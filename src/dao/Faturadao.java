@@ -84,7 +84,7 @@ public class Faturadao {
 
 	try {
 	    List<Fatura> listaFatura = new ArrayList<Fatura>();
-	    PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM FATURA ORDER BY nome");
+	    PreparedStatement stmt = this.connection.prepareStatement("SELECT * FROM FATURA ORDER BY NOME_CLIENTE");
 
 	    ResultSet rs = stmt.executeQuery();
 
@@ -116,7 +116,7 @@ public class Faturadao {
 			while (rs.next()) {
 
 				Fatura = new Fatura();
-				Fatura.setNomeCliente(rs.getString("nome"));
+				Fatura.setNomeCliente(rs.getString("nomeCliente"));
 				//Fatura.setValorTotal(rs.getString("valorTotal"));
 				//Fatura.setCodigoFatura(rs.getString("codigoFatura"));
 				Fatura.setDataVencimento(rs.getDate("dataVencimento"));
@@ -137,7 +137,7 @@ public class Faturadao {
     private Fatura montarObjeto(ResultSet rs) throws SQLException {
 
     Fatura fatura = new Fatura();
-	fatura.setCodigoFatura(rs.getInt("id"));
+	//fatura.setCodigoFatura(rs.getInt("id"));
 	fatura.setNomeCliente(rs.getString("nomeCliente"));
 	fatura.setValorTotal(rs.getDouble("valorTotal"));
 	fatura.setNumeroBoleto(rs.getInt("numeroBoleto"));

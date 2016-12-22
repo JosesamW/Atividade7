@@ -13,7 +13,7 @@
 <body>
 
 	<%
-	FaturaDao dao = new FaturaDao();
+	Faturadao dao = new Faturadao();
 	List<Fatura> lista = dao.listar();
 	%>
 	
@@ -31,13 +31,13 @@
 		%>
 		
 		<tr>
-			<td> <%= Fatura.getcodigoFatura() %> </td>
-			<td> <%= Fatura.getnomeCliente() %> </td>
-			<td> <%= Fatura.dataVencimento() %> </td>
-			<td> <%= Fatura.valorTotal() %> </td>
+			<td> <%= Fatura.getCodigoFatura() %> </td>
+			<td> <%= Fatura.getNomeCliente() %> </td>
+			<td> <%= Fatura.getDataVencimento() %> </td>
+			<td> <%= Fatura.getValorTotal() %> </td>
 			<td> 
-			    <a href='editarContato.jsp?id=<%=contato.getId()%>'>Alterar</a> &nbsp;
-				<a href='removerFatura?nomeCliente=<%=Fatura.getnomeCliente()%>'>Remover</a>
+			    <!--  <a href='editarContato.jsp?id=<%=Fatura.getCodigoFatura()%>'>Alterar</a> &nbsp;-->
+				<a href='removerFatura?nomeCliente=<%=Fatura.getNomeCliente()%>'>Remover</a>
 			</td>
 		</tr>
 		
