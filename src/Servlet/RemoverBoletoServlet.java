@@ -9,11 +9,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.Faturadao;
-import Basicas.Fatura;
+import dao.Boletodao;
+import Basicas.Boleto;
 
 @WebServlet("/removerBoleto")
-public class RemoverFaturaServlet extends HttpServlet {
+public class RemoverBoletoServlet extends HttpServlet {
 
 	private static final long serialVersionUID = 8720553500987085526L;
 
@@ -23,8 +23,10 @@ public class RemoverFaturaServlet extends HttpServlet {
 
 		String codigoBoleto = request.getParameter("codigoBoleto");
 		
-		Faturadao dao = new Faturadao();
-		Fatura Fatura = dao.remover(codigoBoleto);
+		Boletodao dao = new Boletodao();
+		dao.remover(Integer.parseInt(codigoBoleto));
+		
+		
 		
 		PrintWriter out = response.getWriter();
 		out.println("<html>");
